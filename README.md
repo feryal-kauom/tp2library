@@ -1,1 +1,1 @@
-# Library management application - TP2 (with search)
+# Library management TP2
