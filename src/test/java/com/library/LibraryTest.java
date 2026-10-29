@@ -120,4 +120,20 @@ class LibraryTest {
                 () -> library.lend("M-01", "C-007", DAY)
         );
     }
+    @Test
+void searchByTitleIsCaseInsensitive() {
+    assertEquals(
+            1,
+            library.searchByTitle("software").size()
+    );
+
+    assertEquals(
+            1,
+            library.searchByTitle("SOFTWARE").size()
+    );
+
+    assertTrue(
+            library.searchByTitle("unknown").isEmpty()
+    );
+}
 }
